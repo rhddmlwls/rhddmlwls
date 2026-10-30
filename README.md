@@ -4,15 +4,13 @@ Quantitative Research
 
 ## Research
 
-| 프로젝트 | 내용 | 상태 |
-| --- | --- | --- |
-| [Bitcoin Auto Trade](https://github.com/rhddmlwls/rhddmlwls/tree/main/research/bitcoin-auto-trade) | HMM 국면 분석과 국면별 매매 전략 비교 | 오프라인 연구 완료 |
-
-BTCUSDT 일봉과 펀딩 데이터를 사용함. 관측 변수, 관측창, 상태 유지 방식과 매매 규칙을 바꿔가며 비교했고, 같은 조건의 291개 전략군에서 Top 3를 정리함.
+| 프로젝트 | 내용 |
+| --- | --- |
+| [Bitcoin Auto Trade](https://github.com/rhddmlwls/rhddmlwls/tree/main/research/bitcoin-auto-trade) | HMM 국면 분석과 국면별 매매 전략 비교 |
 
 두 seed의 전체 성과와 최근 성과, 미수렴 기록은 [상세 결과](https://github.com/rhddmlwls/rhddmlwls/tree/main/research/bitcoin-auto-trade/results)에 정리함. 전체 기간을 본 뒤 고른 사후 탐색 결과이며, 미사용 테스트 성과는 아님.
 
-현재 구현 범위는 데이터 수집, 국면 분석, 백테스트까지임. 실험 기준일은 2026-10-22임.
+현재 구현 범위는 데이터 수집, 국면 분석, 백테스트까지임.
 
 ## 다음 작업
 
