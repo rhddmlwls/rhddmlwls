@@ -1,6 +1,6 @@
 # rhddmlwls
 
-Quantitative Research · Bitcoin · Python
+Quantitative Research
 
 비트코인 시장의 국면을 모델링하고, 매매 아이디어를 재현 가능한 실험으로 검증합니다.
 연구 질문부터 결과와 한계, 다음 작업까지 기록하는 공간입니다.
