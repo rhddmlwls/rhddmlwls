@@ -3,7 +3,7 @@
   "repository": "https://github.com/rhddmlwls/rhddmlwls",
   "publication_date_kst": "2026-10-30",
   "research_snapshot_date_kst": "2026-10-22",
-  "scope": "Profile narrative, roadmap, reusable templates, selected historical results and configuration snapshots.",
+  "scope": "Profile, research summary, roadmap, project template, selected results and configuration snapshots.",
   "excluded": [
     "research runtime/source code",
     "raw market data",
@@ -85,39 +85,31 @@
   "authored_markdown": [
     {
       "path": "MAINTENANCE.md",
-      "sha256": "4dbd6c2d23166382f83134ee574e251c2a30a8372664cbebc79a1049f852e6f2"
+      "sha256": "355e74454c83df4e512561eef1d6ce0edba99180397d82d773e1e25624c78a46"
     },
     {
       "path": "README.md",
-      "sha256": "dbc58855a7a806d75327c8de5b727603b9d4b95d0174970fe97abdd40eb40ed6"
-    },
-    {
-      "path": "research/bitcoin-auto-trade/configs/README.md",
-      "sha256": "961b45dd0a6bfa0b013406255f1296b3dbf32807c38fd01d400681879503664a"
+      "sha256": "dc274441e6d4eed5abdb56b089c56f903dc12a91ed2d2666bf125c1ea7fe6372"
     },
     {
       "path": "research/bitcoin-auto-trade/README.md",
-      "sha256": "7b03acfc2aff51d8a44ec4af493082afbea145c8e85df2175eb6ef92131a8784"
-    },
-    {
-      "path": "research/bitcoin-auto-trade/results/README.md",
-      "sha256": "a1913d61fa3e5d7ae208ef1f67955530117bde0663aaf38d7411724c62f6010a"
+      "sha256": "0105c2f333363a4f64383479a1aa77c8d2890329d6f32a837b6c8aedb2bae0ad"
     },
     {
       "path": "research/bitcoin-auto-trade/ROADMAP.md",
-      "sha256": "e4bf4dd8166e622c2c5e83aad01ceb2bd33af861da954075b4cce4b4f31cebd0"
+      "sha256": "c5a5520502134543e29679f59d9f7bfb20a58f13f548d7ee7faee3aa30ab13b1"
+    },
+    {
+      "path": "research/bitcoin-auto-trade/configs/README.md",
+      "sha256": "d2af43023b68b3fc2517af050a2e724c05bb7b5ac01d86f0736d82cfd912ffe6"
+    },
+    {
+      "path": "research/bitcoin-auto-trade/results/README.md",
+      "sha256": "0d44b0cbb4efcb554ddd6cc43964ad180ef3e7aa6a08fade5c4151ea760d5f7e"
     },
     {
       "path": "templates/PROJECT.md",
-      "sha256": "5c16941daaba32a9ab5c644eee40e7792be565864d96b694b6007ea54797b74a"
-    },
-    {
-      "path": "templates/UPDATE.md",
-      "sha256": "1a988294479c07f9e3c7ca692127df9e8d8a0815882c11e46a486f930f9a4b82"
-    },
-    {
-      "path": "UPDATES.md",
-      "sha256": "d55326b77e57dd89df4ab43f0181ff2b611752c3a344b5e329b3748c67dffbdc"
+      "sha256": "e2c1a963bf6e69a92ba03bc4fdffd263b1f12f21ac6d7dcaaf480be6da8f1d89"
     }
   ]
 }
