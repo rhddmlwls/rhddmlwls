@@ -3,7 +3,7 @@
   "repository": "https://github.com/rhddmlwls/rhddmlwls",
   "publication_date_kst": "2026-10-30",
   "research_snapshot_date_kst": "2026-10-22",
-  "scope": "Profile, research summary, roadmap, project template, selected results and configuration snapshots.",
+  "scope": "Research profile, implementation summary, retrospective experiment case studies, roadmap, project template, selected results and configuration snapshots.",
   "excluded": [
     "research runtime/source code",
     "raw market data",
@@ -80,20 +80,31 @@
       "published_path": "research/bitcoin-auto-trade/configs/top3_03_momentum120.toml",
       "bytes": 1221,
       "sha256": "94b4ab2d2bbe99606ceccb700518bf3c781221a4c9835bdf257be7d3a511efd1"
+    },
+    {
+      "original_project_path": "docs/assets/research/hmm_five_observations_20261022/observation_regime_zoom.png",
+      "original_report_path": "reports/diagnostics/hmm_five_observations_20261022/images/observation_regime_zoom.png",
+      "published_path": "research/bitcoin-auto-trade/results/images/observation_regime_zoom.png",
+      "bytes": 362903,
+      "sha256": "95979a9aa0c361eced80809ded937ec964507f47178cfbadaf7403551757b3d0"
     }
   ],
   "authored_markdown": [
     {
       "path": "MAINTENANCE.md",
-      "sha256": "355e74454c83df4e512561eef1d6ce0edba99180397d82d773e1e25624c78a46"
+      "sha256": "855edefd843485e2e2477e0f8395eb532395e96f5001a8d7cdac26202204a596"
     },
     {
       "path": "README.md",
-      "sha256": "dc274441e6d4eed5abdb56b089c56f903dc12a91ed2d2666bf125c1ea7fe6372"
+      "sha256": "dc60551819d7ebe81ee3190adaae180e937f629fdc350b28a779b74d9c278ded"
+    },
+    {
+      "path": "research/bitcoin-auto-trade/EXPERIMENTS.md",
+      "sha256": "a1552cd0dfbf4fc360ae12a974ee9d3326d907c97202139d003ee642902216b0"
     },
     {
       "path": "research/bitcoin-auto-trade/README.md",
-      "sha256": "0105c2f333363a4f64383479a1aa77c8d2890329d6f32a837b6c8aedb2bae0ad"
+      "sha256": "1c7a46637c18731173e87e94296697e0c024e47adc086feb2aad47a41e9cede5"
     },
     {
       "path": "research/bitcoin-auto-trade/ROADMAP.md",

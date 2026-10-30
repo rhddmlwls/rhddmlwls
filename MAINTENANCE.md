@@ -7,7 +7,7 @@
 
 1. [프로젝트 양식](templates/PROJECT.md)을 `research/<project-name>/README.md`로 복사
 2. 연구 질문, 방법, 결과, 한계, 다음 작업 작성
-3. 루트 README의 Research 표에 프로젝트 링크 추가
+3. 루트 README의 Research 영역에 프로젝트 요약과 링크 추가
 
 ## 상태 변경
 
