@@ -1,0 +1,689 @@
+{
+  "date_kst": "2026-10-22",
+  "scope": "Completed saved config-runner reports with identical1980UTCdays,price/fundingSHA,executionengine,initial10000,fee5bps+slippage5bps eachside,finalclose. Exclude globals/Williams and require fixedtwo seeds.",
+  "primary_ranking": "Worst seed zero-rateSharpe descending, then mean seedSharpe. Identicaleffectiveconfigs deduplicated; primary publication top3 additionally retains onlybestvariant per feature/modelkind/strategy family.",
+  "reports_used": [
+    "reports/experiments/champion_hmm120_v1-1b91a117ba",
+    "reports/experiments/champion_hmm120_v1-d5a49c8d1e",
+    "reports/experiments/hmm_bear_candidate_train180_v1-6e01870599",
+    "reports/experiments/hmm_bear_models_v1-14c68e57b1",
+    "reports/experiments/hmm_bear_models_v1-b3a8b370c8",
+    "reports/experiments/hmm_bear_naming_interaction_v1-7bec18876c",
+    "reports/experiments/hmm_bear_observations_v1-96ff47c4e0",
+    "reports/experiments/hmm_bear_observations_v1-ab2c6e86a6",
+    "reports/experiments/hmm_five_funding_candidate_v1-7cdd40c3b6",
+    "reports/experiments/hmm_five_observations_v1-35170b9b1d",
+    "reports/experiments/regime_strategies-512a29c049",
+    "reports/experiments/regime_strategies-6c59a24696",
+    "reports/experiments/regime_strategies-9e4bc66382",
+    "reports/experiments/regime_strategies-bfb1314ba7",
+    "reports/experiments/technical_hmm_extended-da79980afb",
+    "reports/experiments/technical_hmm_refinement_cache-f450cafdbd",
+    "reports/experiments/technical_hmm_search-e275dde1e9",
+    "reports/experiments/williams_breakout-2236a12b70",
+    "reports/experiments/williams_breakout-8bc2290c11"
+  ],
+  "reports_excluded": [
+    {
+      "report": "reports/experiments/long_regimes-0a6ddd4462",
+      "reason": "different_evaluation_dates"
+    },
+    {
+      "report": "reports/experiments/long_regimes-0e9be2e678",
+      "reason": "different_evaluation_dates"
+    },
+    {
+      "report": "reports/experiments/long_regimes-560831e835",
+      "reason": "different_evaluation_dates"
+    },
+    {
+      "report": "reports/experiments/long_regimes-a2af6e0966",
+      "reason": "different_evaluation_dates"
+    },
+    {
+      "report": "reports/experiments/long_regimes-f8fd167c28",
+      "reason": "different_evaluation_dates"
+    },
+    {
+      "report": "reports/experiments/williams_no_slippage-d79544607b",
+      "reason": "different_trading_assumptions"
+    },
+    {
+      "report": "reports/experiments/williams_zero_execution_cost-829971e0d7",
+      "reason": "different_trading_assumptions"
+    }
+  ],
+  "unique_effective_candidates": 417,
+  "unique_families": 291,
+  "top3_settings": [
+    {
+      "report": "reports/experiments/hmm_five_funding_candidate_v1-7cdd40c3b6",
+      "config_name": "hmm_five_funding_candidate_v1",
+      "case": "five_risk_funding_hmm_viterbi__long_ema_flat",
+      "observation": "five_risk_funding",
+      "model": "hmm",
+      "decoder": "viterbi",
+      "strategy": "long_ema_flat",
+      "identity": "6a2c55cef95591640197931123f5da2b66deb43c7b41198fdc31e87e2c2127cc",
+      "family_identity": "c83115e7f8b46df335da9141ae6735cd8aa111c079b4e4de78a1e873206f2f92",
+      "effective": {
+        "family": {
+          "features": [
+            {
+              "kind": "log_return",
+              "window": 120
+            },
+            {
+              "kind": "efficiency",
+              "window": 120
+            },
+            {
+              "kind": "taker_imbalance",
+              "window": 120
+            },
+            {
+              "kind": "volatility",
+              "window": 20
+            },
+            {
+              "kind": "funding_mean",
+              "window": 20
+            }
+          ],
+          "model_kind": "hmm",
+          "strategy": {
+            "bull": "long",
+            "side": "ema",
+            "bear": "flat",
+            "ema_fast": 10,
+            "ema_slow": 30,
+            "ema_filter": 200
+          }
+        },
+        "model": {
+          "kind": "hmm",
+          "train_window": 365,
+          "retrain_every": 30,
+          "naming_window": 60,
+          "decode_window": 61,
+          "iterations": 100,
+          "restarts": 10,
+          "sticky_kappa": 0.0
+        },
+        "decoder": "viterbi",
+        "ratio": null
+      },
+      "worst_seed_sharpe": 1.0307246507491528,
+      "mean_seed_sharpe": 1.0565850223265105,
+      "worst_seed_return": 2.8927616749874776,
+      "worst_mdd": -0.2639923907670257,
+      "seeds": [
+        {
+          "seed": 42,
+          "total_return": 2.8927616749874776,
+          "sharpe_zero": 1.0307246507491528,
+          "max_drawdown": -0.2639923907670257,
+          "mean_trade_net_bps": 1133.5675138520282
+        },
+        {
+          "seed": 137,
+          "total_return": 3.154884983257692,
+          "sharpe_zero": 1.082445393903868,
+          "max_drawdown": -0.2588401080661113,
+          "mean_trade_net_bps": 1059.1614627986062
+        }
+      ],
+      "aliases": [
+        {
+          "report": "reports/experiments/hmm_five_funding_candidate_v1-7cdd40c3b6",
+          "case": "five_risk_funding_hmm_viterbi__long_ema_flat"
+        },
+        {
+          "report": "reports/experiments/hmm_five_observations_v1-35170b9b1d",
+          "case": "five_risk_funding_hmm_viterbi__long_ema_flat"
+        }
+      ],
+      "recent2025plus": [
+        {
+          "seed": 42,
+          "total_return": 0.0025847741979152,
+          "sharpe_zero": 0.1060840590998193,
+          "max_drawdown": -0.1926465053894872
+        },
+        {
+          "seed": 137,
+          "total_return": 0.1141915340950316,
+          "sharpe_zero": 0.3999114220680531,
+          "max_drawdown": -0.1869947792502169
+        }
+      ]
+    },
+    {
+      "report": "reports/experiments/hmm_five_observations_v1-35170b9b1d",
+      "config_name": "hmm_five_observations_v1",
+      "case": "five_risk_funding_hmm_filter_r2__long_ema_flat",
+      "observation": "five_risk_funding",
+      "model": "hmm",
+      "decoder": "filter_r2",
+      "strategy": "long_ema_flat",
+      "identity": "a4b45194f6d0548ffe5a2bcc9d53ab091761d1b613dc05ab673782f89c41a96c",
+      "family_identity": "c83115e7f8b46df335da9141ae6735cd8aa111c079b4e4de78a1e873206f2f92",
+      "effective": {
+        "family": {
+          "features": [
+            {
+              "kind": "log_return",
+              "window": 120
+            },
+            {
+              "kind": "efficiency",
+              "window": 120
+            },
+            {
+              "kind": "taker_imbalance",
+              "window": 120
+            },
+            {
+              "kind": "volatility",
+              "window": 20
+            },
+            {
+              "kind": "funding_mean",
+              "window": 20
+            }
+          ],
+          "model_kind": "hmm",
+          "strategy": {
+            "bull": "long",
+            "side": "ema",
+            "bear": "flat",
+            "ema_fast": 10,
+            "ema_slow": 30,
+            "ema_filter": 200
+          }
+        },
+        "model": {
+          "kind": "hmm",
+          "train_window": 365,
+          "retrain_every": 30,
+          "naming_window": 60,
+          "decode_window": 61,
+          "iterations": 100,
+          "restarts": 10,
+          "sticky_kappa": 0.0
+        },
+        "decoder": "filter_r2",
+        "ratio": 2.0
+      },
+      "worst_seed_sharpe": 1.0014369247007928,
+      "mean_seed_sharpe": 1.0270990170507792,
+      "worst_seed_return": 2.726614446912459,
+      "worst_mdd": -0.2914547286018065,
+      "seeds": [
+        {
+          "seed": 42,
+          "total_return": 2.726614446912459,
+          "sharpe_zero": 1.0014369247007928,
+          "max_drawdown": -0.2914547286018065,
+          "mean_trade_net_bps": 1040.7972685939803
+        },
+        {
+          "seed": 137,
+          "total_return": 2.9775500522819573,
+          "sharpe_zero": 1.0527611094007658,
+          "max_drawdown": -0.2864946908265964,
+          "mean_trade_net_bps": 980.0726144652696
+        }
+      ],
+      "aliases": [
+        {
+          "report": "reports/experiments/hmm_five_observations_v1-35170b9b1d",
+          "case": "five_risk_funding_hmm_filter_r2__long_ema_flat"
+        }
+      ],
+      "recent2025plus": [
+        {
+          "seed": 42,
+          "total_return": -0.0347959392245703,
+          "sharpe_zero": -0.0023221615999213,
+          "max_drawdown": -0.2227481490503166
+        },
+        {
+          "seed": 137,
+          "total_return": 0.0726496360873649,
+          "sharpe_zero": 0.2951122682413732,
+          "max_drawdown": -0.2173071438002846
+        }
+      ]
+    },
+    {
+      "report": "reports/experiments/technical_hmm_extended-da79980afb",
+      "config_name": "regime_strategies",
+      "case": "obs60_hmm_viterbi__refine_mix_004",
+      "observation": "obs60",
+      "model": "hmm",
+      "decoder": "viterbi",
+      "strategy": "ema_ema_flat",
+      "identity": "2303b65f048fc704e88c7996865edf74ae8ebbd69fa3646cecb791e4fd32f06c",
+      "family_identity": "995f371c94dceeff27f682864d0cdfba752254b87f6a00d4630c945b4816a980",
+      "effective": {
+        "family": {
+          "features": [
+            {
+              "kind": "log_return",
+              "window": 60
+            },
+            {
+              "kind": "efficiency",
+              "window": 60
+            },
+            {
+              "kind": "taker_imbalance",
+              "window": 60
+            }
+          ],
+          "model_kind": "hmm",
+          "strategy": {
+            "bull": "ema",
+            "side": "ema",
+            "bear": "flat",
+            "ema_fast": 10,
+            "ema_slow": 30,
+            "ema_filter": 200
+          }
+        },
+        "model": {
+          "kind": "hmm",
+          "train_window": 365,
+          "retrain_every": 30,
+          "naming_window": 60,
+          "decode_window": 61,
+          "iterations": 100,
+          "restarts": 10,
+          "sticky_kappa": 0.0
+        },
+        "decoder": "viterbi",
+        "ratio": null
+      },
+      "worst_seed_sharpe": 0.7874652864899138,
+      "mean_seed_sharpe": 0.8282716239800367,
+      "worst_seed_return": 1.6244728300461428,
+      "worst_mdd": -0.2165240087075269,
+      "seeds": [
+        {
+          "seed": 42,
+          "total_return": 1.9901764646504203,
+          "sharpe_zero": 0.8690779614701598,
+          "max_drawdown": -0.2165240087075269,
+          "mean_trade_net_bps": 660.3829610633873
+        },
+        {
+          "seed": 137,
+          "total_return": 1.6244728300461428,
+          "sharpe_zero": 0.7874652864899138,
+          "max_drawdown": -0.2165240087075269,
+          "mean_trade_net_bps": 560.5149628302784
+        }
+      ],
+      "aliases": [
+        {
+          "report": "reports/experiments/regime_strategies-512a29c049",
+          "case": "obs60_hmm_viterbi__ema_ema_flat"
+        },
+        {
+          "report": "reports/experiments/regime_strategies-6c59a24696",
+          "case": "obs60_hmm_viterbi__ema_ema_flat"
+        },
+        {
+          "report": "reports/experiments/regime_strategies-9e4bc66382",
+          "case": "obs60_hmm_viterbi__ema_ema_flat"
+        },
+        {
+          "report": "reports/experiments/regime_strategies-bfb1314ba7",
+          "case": "obs60_hmm_viterbi__ema_ema_flat"
+        },
+        {
+          "report": "reports/experiments/technical_hmm_extended-da79980afb",
+          "case": "obs60_hmm_viterbi__refine_mix_004"
+        },
+        {
+          "report": "reports/experiments/technical_hmm_refinement_cache-f450cafdbd",
+          "case": "obs60_hmm_viterbi__refine_mix_004"
+        }
+      ],
+      "recent2025plus": [
+        {
+          "seed": 42,
+          "total_return": 0.2000669401273809,
+          "sharpe_zero": 0.6525203351110765,
+          "max_drawdown": -0.140412148606878
+        },
+        {
+          "seed": 137,
+          "total_return": 0.1246027773725577,
+          "sharpe_zero": 0.4581396258357531,
+          "max_drawdown": -0.1404121486068783
+        }
+      ]
+    }
+  ],
+  "top3_families": [
+    {
+      "report": "reports/experiments/hmm_five_funding_candidate_v1-7cdd40c3b6",
+      "config_name": "hmm_five_funding_candidate_v1",
+      "case": "five_risk_funding_hmm_viterbi__long_ema_flat",
+      "observation": "five_risk_funding",
+      "model": "hmm",
+      "decoder": "viterbi",
+      "strategy": "long_ema_flat",
+      "identity": "6a2c55cef95591640197931123f5da2b66deb43c7b41198fdc31e87e2c2127cc",
+      "family_identity": "c83115e7f8b46df335da9141ae6735cd8aa111c079b4e4de78a1e873206f2f92",
+      "effective": {
+        "family": {
+          "features": [
+            {
+              "kind": "log_return",
+              "window": 120
+            },
+            {
+              "kind": "efficiency",
+              "window": 120
+            },
+            {
+              "kind": "taker_imbalance",
+              "window": 120
+            },
+            {
+              "kind": "volatility",
+              "window": 20
+            },
+            {
+              "kind": "funding_mean",
+              "window": 20
+            }
+          ],
+          "model_kind": "hmm",
+          "strategy": {
+            "bull": "long",
+            "side": "ema",
+            "bear": "flat",
+            "ema_fast": 10,
+            "ema_slow": 30,
+            "ema_filter": 200
+          }
+        },
+        "model": {
+          "kind": "hmm",
+          "train_window": 365,
+          "retrain_every": 30,
+          "naming_window": 60,
+          "decode_window": 61,
+          "iterations": 100,
+          "restarts": 10,
+          "sticky_kappa": 0.0
+        },
+        "decoder": "viterbi",
+        "ratio": null
+      },
+      "worst_seed_sharpe": 1.0307246507491528,
+      "mean_seed_sharpe": 1.0565850223265105,
+      "worst_seed_return": 2.8927616749874776,
+      "worst_mdd": -0.2639923907670257,
+      "seeds": [
+        {
+          "seed": 42,
+          "total_return": 2.8927616749874776,
+          "sharpe_zero": 1.0307246507491528,
+          "max_drawdown": -0.2639923907670257,
+          "mean_trade_net_bps": 1133.5675138520282
+        },
+        {
+          "seed": 137,
+          "total_return": 3.154884983257692,
+          "sharpe_zero": 1.082445393903868,
+          "max_drawdown": -0.2588401080661113,
+          "mean_trade_net_bps": 1059.1614627986062
+        }
+      ],
+      "aliases": [
+        {
+          "report": "reports/experiments/hmm_five_funding_candidate_v1-7cdd40c3b6",
+          "case": "five_risk_funding_hmm_viterbi__long_ema_flat"
+        },
+        {
+          "report": "reports/experiments/hmm_five_observations_v1-35170b9b1d",
+          "case": "five_risk_funding_hmm_viterbi__long_ema_flat"
+        }
+      ],
+      "recent2025plus": [
+        {
+          "seed": 42,
+          "total_return": 0.0025847741979152,
+          "sharpe_zero": 0.1060840590998193,
+          "max_drawdown": -0.1926465053894872
+        },
+        {
+          "seed": 137,
+          "total_return": 0.1141915340950316,
+          "sharpe_zero": 0.3999114220680531,
+          "max_drawdown": -0.1869947792502169
+        }
+      ]
+    },
+    {
+      "report": "reports/experiments/technical_hmm_extended-da79980afb",
+      "config_name": "regime_strategies",
+      "case": "obs60_hmm_viterbi__refine_mix_004",
+      "observation": "obs60",
+      "model": "hmm",
+      "decoder": "viterbi",
+      "strategy": "ema_ema_flat",
+      "identity": "2303b65f048fc704e88c7996865edf74ae8ebbd69fa3646cecb791e4fd32f06c",
+      "family_identity": "995f371c94dceeff27f682864d0cdfba752254b87f6a00d4630c945b4816a980",
+      "effective": {
+        "family": {
+          "features": [
+            {
+              "kind": "log_return",
+              "window": 60
+            },
+            {
+              "kind": "efficiency",
+              "window": 60
+            },
+            {
+              "kind": "taker_imbalance",
+              "window": 60
+            }
+          ],
+          "model_kind": "hmm",
+          "strategy": {
+            "bull": "ema",
+            "side": "ema",
+            "bear": "flat",
+            "ema_fast": 10,
+            "ema_slow": 30,
+            "ema_filter": 200
+          }
+        },
+        "model": {
+          "kind": "hmm",
+          "train_window": 365,
+          "retrain_every": 30,
+          "naming_window": 60,
+          "decode_window": 61,
+          "iterations": 100,
+          "restarts": 10,
+          "sticky_kappa": 0.0
+        },
+        "decoder": "viterbi",
+        "ratio": null
+      },
+      "worst_seed_sharpe": 0.7874652864899138,
+      "mean_seed_sharpe": 0.8282716239800367,
+      "worst_seed_return": 1.6244728300461428,
+      "worst_mdd": -0.2165240087075269,
+      "seeds": [
+        {
+          "seed": 42,
+          "total_return": 1.9901764646504203,
+          "sharpe_zero": 0.8690779614701598,
+          "max_drawdown": -0.2165240087075269,
+          "mean_trade_net_bps": 660.3829610633873
+        },
+        {
+          "seed": 137,
+          "total_return": 1.6244728300461428,
+          "sharpe_zero": 0.7874652864899138,
+          "max_drawdown": -0.2165240087075269,
+          "mean_trade_net_bps": 560.5149628302784
+        }
+      ],
+      "aliases": [
+        {
+          "report": "reports/experiments/regime_strategies-512a29c049",
+          "case": "obs60_hmm_viterbi__ema_ema_flat"
+        },
+        {
+          "report": "reports/experiments/regime_strategies-6c59a24696",
+          "case": "obs60_hmm_viterbi__ema_ema_flat"
+        },
+        {
+          "report": "reports/experiments/regime_strategies-9e4bc66382",
+          "case": "obs60_hmm_viterbi__ema_ema_flat"
+        },
+        {
+          "report": "reports/experiments/regime_strategies-bfb1314ba7",
+          "case": "obs60_hmm_viterbi__ema_ema_flat"
+        },
+        {
+          "report": "reports/experiments/technical_hmm_extended-da79980afb",
+          "case": "obs60_hmm_viterbi__refine_mix_004"
+        },
+        {
+          "report": "reports/experiments/technical_hmm_refinement_cache-f450cafdbd",
+          "case": "obs60_hmm_viterbi__refine_mix_004"
+        }
+      ],
+      "recent2025plus": [
+        {
+          "seed": 42,
+          "total_return": 0.2000669401273809,
+          "sharpe_zero": 0.6525203351110765,
+          "max_drawdown": -0.140412148606878
+        },
+        {
+          "seed": 137,
+          "total_return": 0.1246027773725577,
+          "sharpe_zero": 0.4581396258357531,
+          "max_drawdown": -0.1404121486068783
+        }
+      ]
+    },
+    {
+      "report": "reports/experiments/technical_hmm_extended-da79980afb",
+      "config_name": "technical_hmm_extended",
+      "case": "obs120_hmm_viterbi__refine_mix_007",
+      "observation": "obs120",
+      "model": "hmm",
+      "decoder": "viterbi",
+      "strategy": "refine_mix_007",
+      "identity": "699862cec78f64c1bcfb3ac65cd0e026ccc12cb4d2726b7f72802fd2a61fbe23",
+      "family_identity": "de7ccfc06aa5d497887285cc116415cd98a44eab48fc44828fd1464be4b21d68",
+      "effective": {
+        "family": {
+          "features": [
+            {
+              "kind": "log_return",
+              "window": 120
+            },
+            {
+              "kind": "efficiency",
+              "window": 120
+            },
+            {
+              "kind": "taker_imbalance",
+              "window": 120
+            }
+          ],
+          "model_kind": "hmm",
+          "strategy": {
+            "bull": {
+              "kind": "momentum",
+              "parameters": {
+                "lookback": 90,
+                "entry_threshold": 0.0,
+                "exit_threshold": 0.0,
+                "trend_filter": 0,
+                "short": false
+              }
+            },
+            "side": "ema",
+            "bear": "flat",
+            "ema_fast": 10,
+            "ema_slow": 30,
+            "ema_filter": 200
+          }
+        },
+        "model": {
+          "kind": "hmm",
+          "train_window": 365,
+          "retrain_every": 30,
+          "naming_window": 60,
+          "decode_window": 61,
+          "iterations": 100,
+          "restarts": 10,
+          "sticky_kappa": 0.0
+        },
+        "decoder": "viterbi",
+        "ratio": null
+      },
+      "worst_seed_sharpe": 0.7763799560398683,
+      "mean_seed_sharpe": 0.8365460579747415,
+      "worst_seed_return": 1.684642955714911,
+      "worst_mdd": -0.2666428645774631,
+      "seeds": [
+        {
+          "seed": 42,
+          "total_return": 2.093914609771011,
+          "sharpe_zero": 0.8967121599096147,
+          "max_drawdown": -0.2666428645774631,
+          "mean_trade_net_bps": 1514.818558926729
+        },
+        {
+          "seed": 137,
+          "total_return": 1.684642955714911,
+          "sharpe_zero": 0.7763799560398683,
+          "max_drawdown": -0.255593375695385,
+          "mean_trade_net_bps": 933.1601603988686
+        }
+      ],
+      "aliases": [
+        {
+          "report": "reports/experiments/technical_hmm_extended-da79980afb",
+          "case": "obs120_hmm_viterbi__refine_mix_007"
+        },
+        {
+          "report": "reports/experiments/technical_hmm_refinement_cache-f450cafdbd",
+          "case": "obs120_hmm_viterbi__refine_mix_007"
+        }
+      ],
+      "recent2025plus": [
+        {
+          "seed": 42,
+          "total_return": 0.2244938518504027,
+          "sharpe_zero": 0.6727930891761872,
+          "max_drawdown": -0.1278903988872999
+        },
+        {
+          "seed": 137,
+          "total_return": 0.2244938518504029,
+          "sharpe_zero": 0.6727930891761905,
+          "max_drawdown": -0.1278903988873007
+        }
+      ]
+    }
+  ],
+  "limits": "Historical exploration on previously inspected data. Include2025plusdiagnostics,selectedfitnonconvergence andbothseeds inpublicsummary.",
+  "snapshot_status": "Historical ranking captured before publication export; no re-ranking in this session."
+}

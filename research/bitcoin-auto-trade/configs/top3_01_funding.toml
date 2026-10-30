@@ -1,0 +1,59 @@
+# Historical strategy-family Top 1, fixed before this reproduction.
+# Retrospective research; weaker performance since 2025 remains in public results.
+name = "top3_01_funding"
+
+[paths]
+data_dir = "../data/extended"
+output_root = "../reports/experiments"
+cache_dir = "../.research-cache"
+
+[[observations]]
+name = "five_risk_funding"
+features = [{kind="log_return",window=120},{kind="efficiency",window=120},{kind="taker_imbalance",window=120},{kind="volatility",window=20},{kind="funding_mean",window=20}]
+
+[[models]]
+name = "hmm"
+kind = "hmm"
+train_window = 365
+retrain_every = 30
+naming_window = 60
+decode_window = 61
+iterations = 100
+restarts = 10
+seeds = [42,137]
+sticky_kappa = 0.0
+
+[decisions]
+ratios = []
+include_viterbi = true
+
+[trading]
+initial_cash = 10000.0
+fees = 0.0005
+slippage = 0.0005
+close_final = true
+
+[evaluation]
+start = "2021-04-30"
+end = "2026-09-30"
+prefix_bars = 100
+sharpe_benchmark = "zero"
+
+[plots]
+enabled = false
+dpi = 150
+
+[selection]
+enabled = false
+
+[diagnostics]
+bear_regimes = false
+
+[[strategies]]
+name = "long_ema_flat"
+bull = "long"
+side = "ema"
+bear = "flat"
+ema_fast = 10
+ema_slow = 30
+ema_filter = 200

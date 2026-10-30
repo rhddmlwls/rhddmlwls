@@ -1,0 +1,700 @@
+{
+  "schema_version": 1,
+  "published_snapshot_date_kst": "2026-10-22",
+  "status": "prepared_locally_not_uploaded",
+  "scope": "Selected historical strategy-family Top 3, both fixed seeds; no raw source data or entire reports distributed.",
+  "ranking_snapshot_source": "reports/diagnostics/github_top3_handoff_20261022/ranking_snapshot.json",
+  "ranking_snapshot_source_sha256": "87ed3b085e20cf1501cd8b66b8d08051a64fa56e6e1704edb526ed8c3db2b6ac",
+  "evaluation": {
+    "start": "2021-04-30",
+    "end": "2026-09-30",
+    "days": 1980,
+    "recent_start": "2025-01-01"
+  },
+  "initial_cash": 10000.0,
+  "fees_per_side": 0.0005,
+  "slippage_per_side": 0.0005,
+  "close_final": true,
+  "ranking_rule": "Descending worst seed Sharpe(Rf=0), then mean; best variant per feature/model-kind/trading-rule family.",
+  "interpretation": "Retrospective exploration of already examined dates; 2025+ is a diagnostic, not an untouched test. Family representatives are selected on full-period scores.",
+  "data_collection_command": "uv run --cache-dir .uv-cache btc-research collect --start 2020-01-01 --end 2026-10-01 --output data/extended --raw-cache data/raw",
+  "lockfile": {
+    "path": "uv.lock",
+    "sha256": "32a5acbc833f7eb52e5716dcd135eef2236b8e3f984c2addc3966258cb2c5c66"
+  },
+  "sources": [
+    {
+      "rank": 1,
+      "config": "configs/top3_01_funding.toml",
+      "config_sha256": "d2c87fadcd89f1c24b26696c528692b155c5b8a717d6a3398e42f1084668968b",
+      "original_report": "reports/experiments/hmm_five_funding_candidate_v1-7cdd40c3b6/report.json",
+      "original_report_sha256": "167f22fa0ff9493c297ba6c3c994fc4af7f8810d776501cee28bdae479cb16d3",
+      "original_case": "five_risk_funding_hmm_viterbi__long_ema_flat",
+      "reproduction_report": "reports/experiments/top3_01_funding-e35de64741/report.json",
+      "reproduction_report_sha256": "735fc0aaaa4b5d52172301c58d3480b3e569ab80b87a966e486c8e29a2dc0370",
+      "run_key": "e35de64741fd4a9991cf17ae07d19364e6d2efa06f8ae648d41ad0b44d75e5c4",
+      "case": "five_risk_funding_hmm_viterbi__long_ema_flat",
+      "inputs": {
+        "data/extended/BTCUSDT_1d.csv": "3929d34bc93facb4a8a57aaf1d272599f4b59d6187b78bc3774a61650ac345ab",
+        "data/extended/BTCUSDT_funding_events.csv": "1c44b91de68005986919313dd8b18cb44563fdf00dcd5ece30f184a339944014",
+        "data/extended/BTCUSDT_funding_daily.csv": "7d3cb10a664c7afbddd76988597012481223fa25f8c54c00585d56916fdd6b01"
+      },
+      "source_sha256": {
+        "pipeline.py": "a4669e7015394362c6bad8778a54ff381ebffce26b58cd5ced39714bbb25afc1",
+        "experiment_config.py": "9c2a9eb9749b446d1772586138423248658b6b0bccb94f7ae4565afc97c1de1c",
+        "data.py": "e22a8402e9b7adc14f8f7d7d202e5aa6ec385e9dca1da1b7079685b71ca6e644",
+        "features.py": "85a9ec583878500d7bd4d94e33d22f0f146fa4dd8ff5a87a0ffee20f34951ee1",
+        "feature_engine.py": "1f7e91300e7d4f574316c573ca5c73bd02dbbd8a7b1c119ac89b30bf3e7b527b",
+        "decisions.py": "53eaa275243281c4a05ff12c6a06ff03a66dc139de3ae883672d6b394f28464e",
+        "posterior.py": "ca65786997c3a348773a86c2e430008e8a0e7c3efcea64d0f692bc32726f50f7",
+        "hmm.py": "e6b2e5841fc55722b40f6d92c4299021b1a692bdd085cd1755069cc870485d16",
+        "directional.py": "1765d868968738b54bf11720c2d6dece30d2edf22d57e0746586a03542add430",
+        "experiment_plots.py": "cd5c9ef6cb777fe00fa095b3a334e018301a035405e0d729df507a2d0f2cd980",
+        "research_cache.py": "cae64fde5fc09021402485acaff1bc647d70388bee1ae8c2fc7fabeaad3cc2dc",
+        "portfolio_metrics.py": "9388734b9e8dec215b9bd44ee87b6413dd9f306e9106d10ad10e5ad0322b889e",
+        "regime_diagnostics.py": "3772d218f593a3253d3858ec4e96fcdde7cc65096de84de041dd0084a3d89120",
+        "strategies.py": "067eda035c82b72c209bfe47ae075c5d041c82ab2424316fb9ddaa69615df01e",
+        "strategy_targets.py": "b94c7a03bf242cf0673c51e3cfbf920702bcdca25003f13ef328894bda7f9f1c",
+        "strategy_plots.py": "9e4e47cd3d134f175dda1a16b7f2853771852173b81a79ab93bd5cc5d06424e0"
+      },
+      "versions": {
+        "numpy": "2.4.6",
+        "pandas": "2.3.3",
+        "hmmlearn": "0.3.3",
+        "scikit-learn": "1.9.1"
+      },
+      "effective_config": {
+        "name": "top3_01_funding",
+        "config_path": "configs/top3_01_funding.toml",
+        "data_dir": "data/extended",
+        "output_root": "reports/experiments",
+        "cache_dir": ".research-cache",
+        "observations": [
+          {
+            "name": "five_risk_funding",
+            "features": [
+              {
+                "kind": "log_return",
+                "window": 120
+              },
+              {
+                "kind": "efficiency",
+                "window": 120
+              },
+              {
+                "kind": "taker_imbalance",
+                "window": 120
+              },
+              {
+                "kind": "volatility",
+                "window": 20
+              },
+              {
+                "kind": "funding_mean",
+                "window": 20
+              }
+            ]
+          }
+        ],
+        "models": [
+          {
+            "name": "hmm",
+            "kind": "hmm",
+            "train_window": 365,
+            "retrain_every": 30,
+            "naming_window": 60,
+            "decode_window": 61,
+            "iterations": 100,
+            "restarts": 10,
+            "seeds": [
+              42,
+              137
+            ],
+            "sticky_kappa": 0.0
+          }
+        ],
+        "decisions": {
+          "ratios": [],
+          "include_viterbi": true
+        },
+        "trading": {
+          "initial_cash": 10000.0,
+          "fees": 0.0005,
+          "slippage": 0.0005,
+          "bull_target": 1,
+          "side_target": 0,
+          "bear_target": -1,
+          "close_final": true
+        },
+        "evaluation": {
+          "start": "2021-04-30",
+          "end": "2026-09-30",
+          "prefix_bars": 100,
+          "reference_labels": "",
+          "reference_case": "obs20_hmm_viterbi",
+          "require_reference_match": false,
+          "sharpe_benchmark": "zero"
+        },
+        "plots": {
+          "enabled": false,
+          "dpi": 150,
+          "recent_start": "2024-01-01",
+          "bull_color": "#a4d9bc",
+          "side_color": "#e0e4e9",
+          "bear_color": "#eea8aa"
+        },
+        "strategies": [
+          {
+            "name": "long_ema_flat",
+            "bull": "long",
+            "side": "ema",
+            "bear": "flat",
+            "ema_fast": 10,
+            "ema_slow": 30,
+            "ema_filter": 200,
+            "donchian_entry": 20,
+            "donchian_exit": 10,
+            "breakout_k": 0.5,
+            "breakout_funding_timing": "conservative_daily",
+            "breakout_final_day": "skip_entry"
+          }
+        ],
+        "signals": [],
+        "selection": {
+          "enabled": false,
+          "selection_end": "2023-12-31",
+          "validation_end": "2024-12-31",
+          "test_start": "2025-01-01",
+          "shortlist_size": 10,
+          "min_trades": 5,
+          "min_validation_trades": 1,
+          "target_sharpe": 1.0,
+          "required_seeds": [
+            42,
+            137
+          ],
+          "walk_forward_first_year": 2023
+        },
+        "diagnostics": {
+          "bear_regimes": false,
+          "horizons": [
+            1,
+            5,
+            20
+          ]
+        }
+      },
+      "validation": [
+        {
+          "observation": "five_risk_funding",
+          "model": "hmm",
+          "seed": 42,
+          "normalization": true,
+          "prefix_invariance": true,
+          "selected_fits": 66,
+          "nonconverged_selected_fits": 1
+        },
+        {
+          "observation": "five_risk_funding",
+          "model": "hmm",
+          "seed": 137,
+          "normalization": true,
+          "prefix_invariance": true,
+          "selected_fits": 66,
+          "nonconverged_selected_fits": 4
+        }
+      ],
+      "cache": {
+        "probability_hits": 2,
+        "probability_misses": 0,
+        "fit_hits": 0,
+        "fit_misses": 0,
+        "backtest_hits": 2,
+        "backtest_misses": 0,
+        "plot_hits": 0,
+        "plot_misses": 0
+      },
+      "backtest_rejections": [],
+      "ledgers": [
+        {
+          "seed": 42,
+          "files": {
+            "targets.csv": "609b5e287c14735377e8f7e1308672eb9b39e61a8506da4d0c725392a01cecc5",
+            "equity.csv": "04c8866c51d19cb09a9f7339a299986eb3fd87c3620d2e020aeef687e0c40ea8",
+            "orders.csv": "21d4103b9e1f29a3a8787252969ebb71cf6b1d8bed3853ea11054d23faf2e95e",
+            "positions.csv": "9dc8b3eeff20170a2a0a2f18531c0db83d0d6b9deccbd5f072eb082bbfbed41e"
+          }
+        },
+        {
+          "seed": 137,
+          "files": {
+            "targets.csv": "19cb8512d8e59dd0ec59083dd47e7db3d4d7ef682a7204df3cbd08270a54c814",
+            "equity.csv": "15c7c632c681a6c1255287f854a8ae6f8af74d2737a92a1b04abf45d48dd2891",
+            "orders.csv": "c4475e3f1f7b36375a1c3913beccf42e231cd5d8d8735356218186f3769ac3a4",
+            "positions.csv": "51f6283486a6800516b173a905b82ebd509722d9712dc94dac9d64d5b89d5888"
+          }
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "config": "configs/top3_02_ema60.toml",
+      "config_sha256": "c37377b72a776d1840e9893b8aa6944b4ce1c147e59b76fb2019e3c168bf8d21",
+      "original_report": "reports/experiments/technical_hmm_extended-da79980afb/report.json",
+      "original_report_sha256": "de34917b08881bdf4847f3f171b65d9515b1d2b64b4342621257d39039207809",
+      "original_case": "obs60_hmm_viterbi__refine_mix_004",
+      "reproduction_report": "reports/experiments/top3_02_ema60-edc82fe90f/report.json",
+      "reproduction_report_sha256": "5319368aad8b0e1e1479b1595ce306d9ec2eeeba61d68b3093230dd2c2547ad9",
+      "run_key": "edc82fe90ff6649a1fed06ae1f7e7141b8e8452bc8c969cd9e7b39e406826ea7",
+      "case": "obs60_hmm_viterbi__ema_ema_flat",
+      "inputs": {
+        "data/extended/BTCUSDT_1d.csv": "3929d34bc93facb4a8a57aaf1d272599f4b59d6187b78bc3774a61650ac345ab",
+        "data/extended/BTCUSDT_funding_events.csv": "1c44b91de68005986919313dd8b18cb44563fdf00dcd5ece30f184a339944014"
+      },
+      "source_sha256": {
+        "pipeline.py": "a4669e7015394362c6bad8778a54ff381ebffce26b58cd5ced39714bbb25afc1",
+        "experiment_config.py": "9c2a9eb9749b446d1772586138423248658b6b0bccb94f7ae4565afc97c1de1c",
+        "data.py": "e22a8402e9b7adc14f8f7d7d202e5aa6ec385e9dca1da1b7079685b71ca6e644",
+        "features.py": "85a9ec583878500d7bd4d94e33d22f0f146fa4dd8ff5a87a0ffee20f34951ee1",
+        "feature_engine.py": "1f7e91300e7d4f574316c573ca5c73bd02dbbd8a7b1c119ac89b30bf3e7b527b",
+        "decisions.py": "53eaa275243281c4a05ff12c6a06ff03a66dc139de3ae883672d6b394f28464e",
+        "posterior.py": "ca65786997c3a348773a86c2e430008e8a0e7c3efcea64d0f692bc32726f50f7",
+        "hmm.py": "e6b2e5841fc55722b40f6d92c4299021b1a692bdd085cd1755069cc870485d16",
+        "directional.py": "1765d868968738b54bf11720c2d6dece30d2edf22d57e0746586a03542add430",
+        "experiment_plots.py": "cd5c9ef6cb777fe00fa095b3a334e018301a035405e0d729df507a2d0f2cd980",
+        "research_cache.py": "cae64fde5fc09021402485acaff1bc647d70388bee1ae8c2fc7fabeaad3cc2dc",
+        "portfolio_metrics.py": "9388734b9e8dec215b9bd44ee87b6413dd9f306e9106d10ad10e5ad0322b889e",
+        "regime_diagnostics.py": "3772d218f593a3253d3858ec4e96fcdde7cc65096de84de041dd0084a3d89120",
+        "strategies.py": "067eda035c82b72c209bfe47ae075c5d041c82ab2424316fb9ddaa69615df01e",
+        "strategy_targets.py": "b94c7a03bf242cf0673c51e3cfbf920702bcdca25003f13ef328894bda7f9f1c",
+        "strategy_plots.py": "9e4e47cd3d134f175dda1a16b7f2853771852173b81a79ab93bd5cc5d06424e0"
+      },
+      "versions": {
+        "numpy": "2.4.6",
+        "pandas": "2.3.3",
+        "hmmlearn": "0.3.3",
+        "scikit-learn": "1.9.1"
+      },
+      "effective_config": {
+        "name": "top3_02_ema60",
+        "config_path": "configs/top3_02_ema60.toml",
+        "data_dir": "data/extended",
+        "output_root": "reports/experiments",
+        "cache_dir": ".research-cache",
+        "observations": [
+          {
+            "name": "obs60",
+            "features": [
+              {
+                "kind": "log_return",
+                "window": 60
+              },
+              {
+                "kind": "efficiency",
+                "window": 60
+              },
+              {
+                "kind": "taker_imbalance",
+                "window": 60
+              }
+            ]
+          }
+        ],
+        "models": [
+          {
+            "name": "hmm",
+            "kind": "hmm",
+            "train_window": 365,
+            "retrain_every": 30,
+            "naming_window": 60,
+            "decode_window": 61,
+            "iterations": 100,
+            "restarts": 10,
+            "seeds": [
+              42,
+              137
+            ],
+            "sticky_kappa": 0.0
+          }
+        ],
+        "decisions": {
+          "ratios": [],
+          "include_viterbi": true
+        },
+        "trading": {
+          "initial_cash": 10000.0,
+          "fees": 0.0005,
+          "slippage": 0.0005,
+          "bull_target": 1,
+          "side_target": 0,
+          "bear_target": -1,
+          "close_final": true
+        },
+        "evaluation": {
+          "start": "2021-04-30",
+          "end": "2026-09-30",
+          "prefix_bars": 100,
+          "reference_labels": "",
+          "reference_case": "obs20_hmm_viterbi",
+          "require_reference_match": false,
+          "sharpe_benchmark": "zero"
+        },
+        "plots": {
+          "enabled": false,
+          "dpi": 150,
+          "recent_start": "2024-01-01",
+          "bull_color": "#a4d9bc",
+          "side_color": "#e0e4e9",
+          "bear_color": "#eea8aa"
+        },
+        "strategies": [
+          {
+            "name": "ema_ema_flat",
+            "bull": "ema",
+            "side": "ema",
+            "bear": "flat",
+            "ema_fast": 10,
+            "ema_slow": 30,
+            "ema_filter": 200,
+            "donchian_entry": 20,
+            "donchian_exit": 10,
+            "breakout_k": 0.5,
+            "breakout_funding_timing": "conservative_daily",
+            "breakout_final_day": "skip_entry"
+          }
+        ],
+        "signals": [],
+        "selection": {
+          "enabled": false,
+          "selection_end": "2023-12-31",
+          "validation_end": "2024-12-31",
+          "test_start": "2025-01-01",
+          "shortlist_size": 10,
+          "min_trades": 5,
+          "min_validation_trades": 1,
+          "target_sharpe": 1.0,
+          "required_seeds": [
+            42,
+            137
+          ],
+          "walk_forward_first_year": 2023
+        },
+        "diagnostics": {
+          "bear_regimes": false,
+          "horizons": [
+            1,
+            5,
+            20
+          ]
+        }
+      },
+      "validation": [
+        {
+          "observation": "obs60",
+          "model": "hmm",
+          "seed": 42,
+          "normalization": true,
+          "prefix_invariance": true,
+          "selected_fits": 68,
+          "nonconverged_selected_fits": 0
+        },
+        {
+          "observation": "obs60",
+          "model": "hmm",
+          "seed": 137,
+          "normalization": true,
+          "prefix_invariance": true,
+          "selected_fits": 68,
+          "nonconverged_selected_fits": 0
+        }
+      ],
+      "cache": {
+        "probability_hits": 2,
+        "probability_misses": 0,
+        "fit_hits": 0,
+        "fit_misses": 0,
+        "backtest_hits": 2,
+        "backtest_misses": 0,
+        "plot_hits": 0,
+        "plot_misses": 0
+      },
+      "backtest_rejections": [],
+      "ledgers": [
+        {
+          "seed": 42,
+          "files": {
+            "targets.csv": "c7b8d46b0a4e3a78664535f8761b702ad1092928c2ac4f856904877f3a02febe",
+            "equity.csv": "1ab8ba69aeb640f9f6afd3765409651fc48b69240caf19e47c419ac3e7746ea5",
+            "orders.csv": "22472a25ca0080c8d2d22c753a7e5aeea3024ed28a974e15a796128e8beab812",
+            "positions.csv": "9e22a0cb6effcf56a11c0c74dacedc7fad1c06abb3c1187094b29eb88323c6c5"
+          }
+        },
+        {
+          "seed": 137,
+          "files": {
+            "targets.csv": "274843065c31e46a2696bdafa4d677498c73696f7fb8aef77f33d35f1a521ba3",
+            "equity.csv": "a06095d803fad0034ca6452a6813004cd3f1e7000ba36eb31060b4fe21693c69",
+            "orders.csv": "5d8ad48f912a77c14d8d03442dc4978739423d7f06976f9159933b492e71c530",
+            "positions.csv": "85c8c9f872d7bb08a37aab0f1b4ab7184924d3486f92bcb4da7298d1d424379a"
+          }
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "config": "configs/top3_03_momentum120.toml",
+      "config_sha256": "94b4ab2d2bbe99606ceccb700518bf3c781221a4c9835bdf257be7d3a511efd1",
+      "original_report": "reports/experiments/technical_hmm_extended-da79980afb/report.json",
+      "original_report_sha256": "de34917b08881bdf4847f3f171b65d9515b1d2b64b4342621257d39039207809",
+      "original_case": "obs120_hmm_viterbi__refine_mix_007",
+      "reproduction_report": "reports/experiments/top3_03_momentum120-06b7f5e627/report.json",
+      "reproduction_report_sha256": "864d50bd619f453aadcc184e233a7dff7257d1228aa68831b4ebe4dcee638dc5",
+      "run_key": "06b7f5e627bf9731823bc57d4e67778c9a791440dad788da2ed2364909877422",
+      "case": "obs120_hmm_viterbi__momentum90_ema_flat",
+      "inputs": {
+        "data/extended/BTCUSDT_1d.csv": "3929d34bc93facb4a8a57aaf1d272599f4b59d6187b78bc3774a61650ac345ab",
+        "data/extended/BTCUSDT_funding_events.csv": "1c44b91de68005986919313dd8b18cb44563fdf00dcd5ece30f184a339944014"
+      },
+      "source_sha256": {
+        "pipeline.py": "a4669e7015394362c6bad8778a54ff381ebffce26b58cd5ced39714bbb25afc1",
+        "experiment_config.py": "9c2a9eb9749b446d1772586138423248658b6b0bccb94f7ae4565afc97c1de1c",
+        "data.py": "e22a8402e9b7adc14f8f7d7d202e5aa6ec385e9dca1da1b7079685b71ca6e644",
+        "features.py": "85a9ec583878500d7bd4d94e33d22f0f146fa4dd8ff5a87a0ffee20f34951ee1",
+        "feature_engine.py": "1f7e91300e7d4f574316c573ca5c73bd02dbbd8a7b1c119ac89b30bf3e7b527b",
+        "decisions.py": "53eaa275243281c4a05ff12c6a06ff03a66dc139de3ae883672d6b394f28464e",
+        "posterior.py": "ca65786997c3a348773a86c2e430008e8a0e7c3efcea64d0f692bc32726f50f7",
+        "hmm.py": "e6b2e5841fc55722b40f6d92c4299021b1a692bdd085cd1755069cc870485d16",
+        "directional.py": "1765d868968738b54bf11720c2d6dece30d2edf22d57e0746586a03542add430",
+        "experiment_plots.py": "cd5c9ef6cb777fe00fa095b3a334e018301a035405e0d729df507a2d0f2cd980",
+        "research_cache.py": "cae64fde5fc09021402485acaff1bc647d70388bee1ae8c2fc7fabeaad3cc2dc",
+        "portfolio_metrics.py": "9388734b9e8dec215b9bd44ee87b6413dd9f306e9106d10ad10e5ad0322b889e",
+        "regime_diagnostics.py": "3772d218f593a3253d3858ec4e96fcdde7cc65096de84de041dd0084a3d89120",
+        "strategies.py": "067eda035c82b72c209bfe47ae075c5d041c82ab2424316fb9ddaa69615df01e",
+        "strategy_targets.py": "b94c7a03bf242cf0673c51e3cfbf920702bcdca25003f13ef328894bda7f9f1c",
+        "strategy_plots.py": "9e4e47cd3d134f175dda1a16b7f2853771852173b81a79ab93bd5cc5d06424e0",
+        "technical_strategies.py": "928e926aaaff4def5ba0edff13144c2da567bedc2c25a554bcb024b77c08d5d7"
+      },
+      "versions": {
+        "numpy": "2.4.6",
+        "pandas": "2.3.3",
+        "hmmlearn": "0.3.3",
+        "scikit-learn": "1.9.1"
+      },
+      "effective_config": {
+        "name": "top3_03_momentum120",
+        "config_path": "configs/top3_03_momentum120.toml",
+        "data_dir": "data/extended",
+        "output_root": "reports/experiments",
+        "cache_dir": ".research-cache",
+        "observations": [
+          {
+            "name": "obs120",
+            "features": [
+              {
+                "kind": "log_return",
+                "window": 120
+              },
+              {
+                "kind": "efficiency",
+                "window": 120
+              },
+              {
+                "kind": "taker_imbalance",
+                "window": 120
+              }
+            ]
+          }
+        ],
+        "models": [
+          {
+            "name": "hmm",
+            "kind": "hmm",
+            "train_window": 365,
+            "retrain_every": 30,
+            "naming_window": 60,
+            "decode_window": 61,
+            "iterations": 100,
+            "restarts": 10,
+            "seeds": [
+              42,
+              137
+            ],
+            "sticky_kappa": 0.0
+          }
+        ],
+        "decisions": {
+          "ratios": [],
+          "include_viterbi": true
+        },
+        "trading": {
+          "initial_cash": 10000.0,
+          "fees": 0.0005,
+          "slippage": 0.0005,
+          "bull_target": 1,
+          "side_target": 0,
+          "bear_target": -1,
+          "close_final": true
+        },
+        "evaluation": {
+          "start": "2021-04-30",
+          "end": "2026-09-30",
+          "prefix_bars": 100,
+          "reference_labels": "",
+          "reference_case": "obs20_hmm_viterbi",
+          "require_reference_match": false,
+          "sharpe_benchmark": "zero"
+        },
+        "plots": {
+          "enabled": false,
+          "dpi": 150,
+          "recent_start": "2024-01-01",
+          "bull_color": "#a4d9bc",
+          "side_color": "#e0e4e9",
+          "bear_color": "#eea8aa"
+        },
+        "strategies": [
+          {
+            "name": "momentum90_ema_flat",
+            "bull": "mom90",
+            "side": "ema",
+            "bear": "flat",
+            "ema_fast": 10,
+            "ema_slow": 30,
+            "ema_filter": 200,
+            "donchian_entry": 20,
+            "donchian_exit": 10,
+            "breakout_k": 0.5,
+            "breakout_funding_timing": "conservative_daily",
+            "breakout_final_day": "skip_entry"
+          }
+        ],
+        "signals": [
+          {
+            "name": "mom90",
+            "kind": "momentum",
+            "parameters": {
+              "lookback": 90,
+              "entry_threshold": 0.0,
+              "exit_threshold": 0.0,
+              "trend_filter": 0,
+              "short": false
+            }
+          }
+        ],
+        "selection": {
+          "enabled": false,
+          "selection_end": "2023-12-31",
+          "validation_end": "2024-12-31",
+          "test_start": "2025-01-01",
+          "shortlist_size": 10,
+          "min_trades": 5,
+          "min_validation_trades": 1,
+          "target_sharpe": 1.0,
+          "required_seeds": [
+            42,
+            137
+          ],
+          "walk_forward_first_year": 2023
+        },
+        "diagnostics": {
+          "bear_regimes": false,
+          "horizons": [
+            1,
+            5,
+            20
+          ]
+        }
+      },
+      "validation": [
+        {
+          "observation": "obs120",
+          "model": "hmm",
+          "seed": 42,
+          "normalization": true,
+          "prefix_invariance": true,
+          "selected_fits": 66,
+          "nonconverged_selected_fits": 0
+        },
+        {
+          "observation": "obs120",
+          "model": "hmm",
+          "seed": 137,
+          "normalization": true,
+          "prefix_invariance": true,
+          "selected_fits": 66,
+          "nonconverged_selected_fits": 2
+        },
+        {
+          "technical_prefix_invariance": true,
+          "global_strategy_seed_observation_invariance": true,
+          "technical_signal_count": 1
+        }
+      ],
+      "cache": {
+        "probability_hits": 2,
+        "probability_misses": 0,
+        "fit_hits": 0,
+        "fit_misses": 0,
+        "backtest_hits": 2,
+        "backtest_misses": 0,
+        "plot_hits": 0,
+        "plot_misses": 0
+      },
+      "backtest_rejections": [],
+      "ledgers": [
+        {
+          "seed": 42,
+          "files": {
+            "targets.csv": "1762d0dbc394f4970f9f932cf6330b597e9f2bab50a5d95d43579aad283d254a",
+            "equity.csv": "3158c7368eddbe1fcf1104e8e246afff0a090e596d3101a144fd3c680133559d",
+            "orders.csv": "8a38bdb23a3cb43e55ae4b1a2e3726436cba46d8f41e4d1ad0bc8ce9d8af5b74",
+            "positions.csv": "22b30a1018b95c0fe6da5c258e8bad656b46fb811c1d0ca6fb45acbf9b58a85c"
+          }
+        },
+        {
+          "seed": 137,
+          "files": {
+            "targets.csv": "c62b8e6fd5bd0f510e45be1330ae459addc92fceff75fe186bb589e67290495c",
+            "equity.csv": "ea21507f3bae0dfba32655ab4f66358152b9bbc2cb304b3a7aa91ff1cd39da53",
+            "orders.csv": "83f23133babc3ff05bea61faa0988e5863b8e0e0deeb18be12a982496d321d23",
+            "positions.csv": "57bd5aab1c654d21375cd0a65f1f48f2f1b196d634ad1db0f3e23ef297362ba2"
+          }
+        }
+      ]
+    }
+  ],
+  "artifacts": {
+    "equity.csv": {
+      "sha256": "3660f87c189d76862ca25d9f385a34b6265d95ef4d95ee497ec3c91c0dc15d83",
+      "bytes": 260255
+    },
+    "images/pnl_drawdown.png": {
+      "sha256": "2c1f8c22a9509c5693d40467508ae792ee2a9ccac5a74610f492e86b5e8e5f4b",
+      "bytes": 238776
+    },
+    "images/recent_pnl_drawdown.png": {
+      "sha256": "dc9e98ce38eebedece0bb71624743aa01849838c106047bd8f6d03c4e43d2f57",
+      "bytes": 239890
+    },
+    "metrics.csv": {
+      "sha256": "8934de6d2b32cf71f5d6123ec895d995a2f471722b74ec35b59756164693ef09",
+      "bytes": 2405
+    },
+    "ranking_snapshot.json": {
+      "sha256": "7816d0eb0852a4195aeaf7ee1366bffe4846ee61d5e79571f1175ccf82fec202",
+      "bytes": 22460
+    },
+    "README.md": {
+      "sha256": "5c297f00c4a93bad28cf3425079639dc7b84f23dccb7c5b9a01d67eaf5306146",
+      "bytes": 9006
+    },
+    "reproduction.json": {
+      "sha256": "7f4064fd1bdefa86acd0135f3bddc3f36526b927554063c84b9616ffaac7122c",
+      "bytes": 43290
+    },
+    "verification.json": {
+      "sha256": "7c7bdc6b95b5d8f328865505c19370d36d42cd7959e28c86c71865a6f8c4f588",
+      "bytes": 2097
+    }
+  }
+}
