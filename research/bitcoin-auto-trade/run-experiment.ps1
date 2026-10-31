@@ -7,9 +7,9 @@ Push-Location -LiteralPath $PSScriptRoot
 try {
     $taskPython = Join-Path $PSScriptRoot ".venv/Scripts/python.exe"
     if (-not (Test-Path -LiteralPath $taskPython)) {
-        throw "Project Python is missing. Create .venv with Python 3.12, then install this project with pip install -e .[plots]."
+        throw "Create a Python 3.12 .venv and install this project first."
     }
-    $taskArguments = @("-m", "trading.cli", "experiment", "--config", $Config)
+    $taskArguments = @("-m", "trading.run", "--config", $Config)
     if ($CheckOnly) { $taskArguments += "--check" }
     & $taskPython @taskArguments
     $taskExitCode = $LASTEXITCODE

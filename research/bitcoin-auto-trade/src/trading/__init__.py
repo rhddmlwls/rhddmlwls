@@ -1,1 +1,1 @@
-"""Offline market research. No order execution."""
+"""Compact, config-driven HMM trading research."""

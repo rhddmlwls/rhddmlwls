@@ -1,15 +1,17 @@
-# Fixed existing best profile and perpetual long-hold; funding cashflow sensitivity.
-name = "hmm_fixed_best_funding_actual_v1"
+name = "btc_regime_mix"
+[data]
+symbol = "BTCUSDT"
 [paths]
 data_dir = "../data/extended"
 output_root = "../reports/experiments"
-cache_dir = "../.research-cache"
-[[observations]]
-name = "five_risk_funding"
-features = [{kind="log_return",window=120},{kind="efficiency",window=120},{kind="taker_imbalance",window=120},{kind="volatility",window=20},{kind="funding_mean",window=20}]
-[[models]]
-name = "hmm"
-kind = "hmm"
+cache_dir = "../.interview-cache"
+[features]
+return_window = 120
+efficiency_window = 120
+imbalance_window = 120
+volatility_window = 20
+funding_window = 20
+[model]
 train_window = 365
 retrain_every = 30
 naming_window = 60
@@ -17,66 +19,20 @@ decode_window = 61
 iterations = 100
 restarts = 10
 seeds = [42]
-sticky_kappa = 0.0
-[decisions]
-ratios = []
-include_viterbi = false
-smoothing_windows = [10]
+smoothing_window = 10
+[strategy]
+fast = 16
+slow = 35
+signal = 9
+trend_filter = 200
+bull = "long"
+side = "macd_long"
+bear = "macd_short"
 [trading]
 initial_cash = 10000.0
 fees = 0.0005
 slippage = 0.0005
 close_final = true
-funding_mode = "actual"
 [evaluation]
 start = "2021-05-09"
 end = "2026-09-30"
-prefix_bars = 100
-sharpe_benchmark = "zero"
-[plots]
-enabled = false
-dpi = 150
-recent_start = "2025-01-01"
-[selection]
-enabled = false
-selection_end = "2023-12-31"
-validation_end = "2024-12-31"
-test_start = "2025-01-01"
-shortlist_size = 10
-min_trades = 5
-min_validation_trades = 1
-required_seeds = [42]
-target_sharpe = 1.0
-walk_forward_first_year = 2023
-[diagnostics]
-bear_regimes = false
-[label_validation]
-enabled = false
-[downside_prediction]
-enabled = false
-[smoothing_validation]
-enabled = false
-
-
-
-[[signals]]
-name = "macd_16_35_9_f0_short"
-kind = "macd"
-parameters = {fast = 16, slow = 35, signal = 9, trend_filter = 0, direction = "short"}
-
-[[signals]]
-name = "macd_16_35_9_f200_long"
-kind = "macd"
-parameters = {fast = 16, slow = 35, signal = 9, trend_filter = 200, direction = "long"}
-
-[[strategies]]
-name = "full_return_mix"
-bull = "long"
-side = "macd_16_35_9_f200_long"
-bear = "macd_16_35_9_f0_short"
-
-[[strategies]]
-name = "buy_hold"
-bull = "long"
-side = "long"
-bear = "long"

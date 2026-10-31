@@ -49,7 +49,7 @@ BTC에서 정한 입력, HMM 설정과 매매 규칙을 고정하고 각 코인�
 
 ```powershell
 py -3.12 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -e ".[plots]"
+.\.venv\Scripts\python.exe -m pip install -e .
 .\run-experiment.ps1 -Config configs/btc.toml -CheckOnly
 .\run-experiment.ps1 -Config configs/btc.toml
 ```
@@ -57,5 +57,5 @@ py -3.12 -m venv .venv
 실행에는 별도 가격·펀딩 CSV가 필요함. 저장된 대표 성과만 검산하려면 다음 명령을 사용함.
 
 ```powershell
-python verify_results.py
+btc-research --verify-results
 ```
