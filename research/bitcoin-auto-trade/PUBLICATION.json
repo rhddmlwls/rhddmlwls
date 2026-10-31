@@ -4,14 +4,14 @@
   "scope": {
     "core_python_modules": 7,
     "source_lines": 822,
-    "main_study_modules": 4,
     "test_files": 1,
     "verified_core_tests": 11,
     "verified_equity_curves": 15,
     "config_examples": 2,
     "figures": 4,
     "model_training_code": true,
-    "raw_market_data": false
+    "raw_market_data": false,
+    "calculation_modules": 4
   },
   "files": [
     {
@@ -21,8 +21,8 @@
     },
     {
       "path": "CODE.md",
-      "bytes": 3148,
-      "sha256": "bf00d12261e7a8ee2d62e61996b676e11594165a3a7fd9a9eebc6c91ef29dac5"
+      "bytes": 2022,
+      "sha256": "4f887530b26a598ca5db8e49b37dbd85aa2bdd6dc781f84b7b131894d43969c1"
     },
     {
       "path": "EXPERIMENTS.md",
