@@ -1,52 +1,44 @@
 {
-  "purpose": "Essential Bitcoin research narrative and selected results only",
+  "purpose": "Concise research results and daily-equity metric verification",
+  "previous_commit": "8967072cca9db97408cbdd8b02812127224b0cf5",
   "scope": {
-    "representative_figures": 2,
-    "summary_rows": 15,
-    "parameter_files": 5,
-    "source_code_included": false,
-    "full_ledgers_and_audit_dumps_included": false
+    "verification_script": 1,
+    "result_csvs": 2,
+    "representative_curves": 15,
+    "config_examples": 2,
+    "model_training_code": false,
+    "raw_market_data": false
   },
   "files": [
     {
-      "path": "configs/cross_asset_btc_v1.toml",
-      "bytes": 2025,
-      "sha256": "3bf8f8a698aa720ed53a085725753ecfd2c39b9071bd17c96b6cf53f2f1b1d8b"
-    },
-    {
-      "path": "configs/cross_asset_eth_v1.toml",
-      "bytes": 2025,
-      "sha256": "275c0eb804d3cf4c0c0fe6b79f305bd5204bdd894f2182a3da0e162e381ce8f4"
-    },
-    {
-      "path": "configs/cross_asset_sol_v1.toml",
-      "bytes": 2025,
-      "sha256": "0254289d8033206b6ce0775444256a278bb720777652c0b848d5a75c4a4db28b"
-    },
-    {
-      "path": "configs/cross_asset_xrp_v1.toml",
-      "bytes": 2025,
-      "sha256": "490b13afe13c5e087468ca03804294bc3ac1fce5d89c89617eb1ec8c9f44b018"
-    },
-    {
-      "path": "configs/hmm_fixed_best_funding_actual_v1.toml",
+      "path": "configs/btc.toml",
       "bytes": 1934,
       "sha256": "4f0a09f321bf74cc453aebc98593f82a5b432182eb56828e27feadafa2d4d1bd"
     },
     {
       "path": "configs/README.md",
-      "bytes": 1515,
-      "sha256": "7f61f7ddc18637775bf7f83bb688ea82df51e6e85fc921a2e76ebefc40435f0f"
+      "bytes": 1292,
+      "sha256": "d92ab866b3898467895f3ed32b3007c174c6ba78b7e9f94fee904754aae13280"
+    },
+    {
+      "path": "configs/transfer.toml",
+      "bytes": 2025,
+      "sha256": "275c0eb804d3cf4c0c0fe6b79f305bd5204bdd894f2182a3da0e162e381ce8f4"
     },
     {
       "path": "EXPERIMENTS.md",
-      "bytes": 4309,
-      "sha256": "07ec3438c54429af9e6fc5d38bac2c335a4cf34dc94ff489cff4bfc88995c7f3"
+      "bytes": 2736,
+      "sha256": "540e9c5db362177017179d2e0317518a8d66141ebb54f60d8edfe33bfa1581d1"
     },
     {
       "path": "README.md",
-      "bytes": 4895,
-      "sha256": "448df65ac82a35500cbf1ca98539238800d775fe00e2e2dccaa446812e2fb40b"
+      "bytes": 4127,
+      "sha256": "1375e606caa51ccb2f0ae9124e80f2522f9b78e705cec0120f135432c969ce0e"
+    },
+    {
+      "path": "results/equity.csv",
+      "bytes": 477824,
+      "sha256": "f18b2ffcf7fbb4d2b656f1c6e15cd76a35c6ad623b7798f1f011fe06739f00de"
     },
     {
       "path": "results/images/btc_strategy_comparison.png",
@@ -60,13 +52,18 @@
     },
     {
       "path": "results/README.md",
-      "bytes": 3047,
-      "sha256": "8e22086eabd60796ccdb77e5ef0cc4f4836b4d29bf64228de971ac3fd2cca43a"
+      "bytes": 2472,
+      "sha256": "f4683631fac7f1927c1e3f0cd96d41eb648516e2a8a4b35653c3147d08f48d15"
     },
     {
       "path": "results/summary.csv",
-      "bytes": 3045,
-      "sha256": "b173a43f03c9398d287fa69c85f70a4d1e539c2a3f2f20f89cdc01b68ccb5c50"
+      "bytes": 1720,
+      "sha256": "f4c6267e6cbfed4f6e2a39ede4c06c2838cb2bcd8b88ced1212b6358d23852d5"
+    },
+    {
+      "path": "verify_results.py",
+      "bytes": 5543,
+      "sha256": "f2fdce230e4e5095043bd0adad8c6a2bb344c79618be39f8546c199753250091"
     }
   ]
 }
