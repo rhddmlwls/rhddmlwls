@@ -4,6 +4,8 @@ Interested in Quantitative Research
 
 ## Projects
 
+### SNU Quant study
+
 **[시장 국면에 따른 매매 전략 연구](research/bitcoin-auto-trade/)**
 
 BTC OHLCV, funding data로 시장 국면을 추정하고, 국면별 매매 전략을 비용 반영 백테스트로 비교한 프로젝트
