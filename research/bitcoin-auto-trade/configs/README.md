@@ -1,15 +1,20 @@
-# Top 3 설정
+# 주요 실험 조건
 
-2026-10-22에 재현한 세 TOML의 원본 사본임.
+대표 결과의 입력, HMM 설정과 매매 조건을 확인하는 TOML 5개를 제공함. 이번 공개 범위에는 실행 코드가 포함되지 않으므로 이 파일들은 조건 확인용임.
 
-| 설정 | 전략군 |
+[프로젝트 개요](../README.md) / [대표 결과](../results/README.md)
+
+| 설정 | 확인할 조건 |
 | --- | --- |
-| [top3_01_funding.toml](top3_01_funding.toml) | 펀딩 5변수 / 롱, EMA, 현금 |
-| [top3_02_ema60.toml](top3_02_ema60.toml) | 60일 3변수 / EMA, EMA, 현금 |
-| [top3_03_momentum120.toml](top3_03_momentum120.toml) | 120일 3변수 / 모멘텀90, EMA, 현금 |
+| [BTC 사후 연결과 롱 보유](hmm_fixed_best_funding_actual_v1.toml) | 2021-05-09~2026-09-30, seed 42, 실제 펀딩 |
+| [BTC 공통 기간 대조](cross_asset_btc_v1.toml) | 공통 입력과 평가기간으로 다시 실행한 BTC |
+| [ETH 적용](cross_asset_eth_v1.toml) | 같은 구조를 ETH에 적용, seed 42 / 137 |
+| [SOL 적용](cross_asset_sol_v1.toml) | 같은 구조를 SOL에 적용, seed 42 / 137 |
+| [XRP 적용](cross_asset_xrp_v1.toml) | 같은 구조를 XRP에 적용, seed 42 / 137 |
 
-입력 경로 `../data/extended` 등은 원래 연구 프로젝트의 디렉터리 기준임. 이 프로필 저장소에는 실행 코드와 데이터가 없으므로 TOML만으로 학습과 재현 실행은 불가함.
+공통 기간 설정은 입력을 2020-10-01부터, 평가를 2022-03-01~2026-09-30으로 맞춤. HMM은 각 자산의 이전 관측만으로 학습하며 BTC의 적합 모수를 다른 코인에 복사하지 않음.
 
-원래 프로젝트의 표준 명령은 `./run-experiment.ps1 -Config configs/long_regimes.toml`임. 설정 검사만 할 때는 `-CheckOnly`를 추가함. 개별 후보는 해당 Top 3 설정을 지정함. 과거 실행 결과, 해시, 원장 대사는 [재현 기록](../results/reproduction.json)에서 확인 가능함.
+초기자금 10,000 USDT, 다음 시가 체결, 진입 비용 차감 후 자산 1배 수량 고정, 실제 펀딩과 마지막 종가 청산을 사용함. 수수료와 슬리피지는 매 체결 각각 0.05%임. seed 42와 137은 각각 10개 초기값의 묶음임.
 
-일반 조건은 TOML에서 먼저 변경함. 학습, 확률, 매매, 그림 캐시를 분리하는 기존 연구 흐름을 유지함. 게시 사본의 해시는 [PUBLICATION.json](../PUBLICATION.json)에 기록함.
+TOML의 데이터와 보고서 경로는 원래 로컬 실험 환경을 가리킴. 원시 자료, 학습 캐시와 전체 실행 보고서는 함께 공개하지 않음.
+

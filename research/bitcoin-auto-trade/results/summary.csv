@@ -1,0 +1,16 @@
+experiment,symbol,strategy,seed_group,start_utc,end_utc,total_return,sharpe_zero,max_drawdown,selection,initial_cash_usdt,fee_bps,slippage_bps,funding_mode
+btc_regime_search,BTCUSDT,posthoc_regime_mix,42,2021-05-09,2026-09-30,5.89922387225859,1.1574072383195426,-0.30140896276940976,"Best-return candidates selected separately per regime on full period, then combined; not a search of every joint allocation",10000,5,5,actual
+btc_regime_search,BTCUSDT,perpetual_long_hold,independent,2021-05-09,2026-09-30,0.02665434839930958,0.3481302070196471,-0.8458545208000521,Baseline,10000,5,5,actual
+btc_chronological_launch,BTCUSDT,2024_selected_mix,42,2025-01-01,2026-09-30,-0.20697482182702853,-0.6975612381607923,-0.26738040720201417,Selected through 2024; fresh cash evaluation; dates previously studied,10000,5,5,actual
+fixed_rule_transfer,BTCUSDT,btc_fixed_mix,42,2022-03-01,2026-09-30,4.853421957410607,1.2746883692241062,-0.3343269130806621,Frozen BTC rules; HMM refit on own past data,10000,5,5,actual
+fixed_rule_transfer,BTCUSDT,btc_fixed_mix,137,2022-03-01,2026-09-30,5.69862575873827,1.3249718809972664,-0.3405414726380859,Frozen BTC rules; HMM refit on own past data,10000,5,5,actual
+fixed_rule_transfer,BTCUSDT,buy_hold,independent,2022-03-01,2026-09-30,0.4610169658928722,0.42813317191168293,-0.6844994981166298,Own perpetual long-hold baseline,10000,5,5,actual
+fixed_rule_transfer,ETHUSDT,btc_fixed_mix,42,2022-03-01,2026-09-30,1.4572389738209632,0.6544246462022605,-0.6865046203865985,Frozen BTC rules; HMM refit on own past data,10000,5,5,actual
+fixed_rule_transfer,ETHUSDT,btc_fixed_mix,137,2022-03-01,2026-09-30,1.3238171202745792,0.636636099242338,-0.6457400342181938,Frozen BTC rules; HMM refit on own past data,10000,5,5,actual
+fixed_rule_transfer,ETHUSDT,buy_hold,independent,2022-03-01,2026-09-30,-0.364133016757171,0.2981658287909278,-0.8049250711015606,Own perpetual long-hold baseline,10000,5,5,actual
+fixed_rule_transfer,SOLUSDT,btc_fixed_mix,42,2022-03-01,2026-09-30,7.117472378010527,1.0561455961498452,-0.568663016354086,Frozen BTC rules; HMM refit on own past data,10000,5,5,actual
+fixed_rule_transfer,SOLUSDT,btc_fixed_mix,137,2022-03-01,2026-09-30,6.911475732224253,1.0528018427741586,-0.4923036543723591,Frozen BTC rules; HMM refit on own past data,10000,5,5,actual
+fixed_rule_transfer,SOLUSDT,buy_hold,independent,2022-03-01,2026-09-30,-0.0018632494982885328,0.49075568230525934,-0.9099321306139928,Own perpetual long-hold baseline,10000,5,5,actual
+fixed_rule_transfer,XRPUSDT,btc_fixed_mix,42,2022-03-01,2026-09-30,2.621431433093391,0.721990800907448,-0.45193589308455306,Frozen BTC rules; HMM refit on own past data,10000,5,5,actual
+fixed_rule_transfer,XRPUSDT,btc_fixed_mix,137,2022-03-01,2026-09-30,1.0813375452960061,0.5347143912816891,-0.5058896464814391,Frozen BTC rules; HMM refit on own past data,10000,5,5,actual
+fixed_rule_transfer,XRPUSDT,buy_hold,independent,2022-03-01,2026-09-30,0.571727235868636,0.5329055693928676,-0.776937624611323,Own perpetual long-hold baseline,10000,5,5,actual

@@ -1,126 +1,72 @@
 {
-  "schema_version": 1,
-  "repository": "https://github.com/rhddmlwls/rhddmlwls",
-  "publication_date_kst": "2026-10-30",
-  "research_snapshot_date_kst": "2026-10-22",
-  "scope": "Research profile, implementation summary, retrospective experiment case studies, roadmap, project template, selected results and configuration snapshots.",
-  "excluded": [
-    "research runtime/source code",
-    "raw market data",
-    "full experiment reports",
-    "training caches",
-    "account credentials"
-  ],
-  "new_training_or_backtesting_performed": false,
-  "past_manifest_status_preserved": "results/manifest.json status describes the local preparation state on 2026-10-22, not this publication.",
-  "original_paths_are_source_project_references": true,
-  "copied_files": [
+  "purpose": "Essential Bitcoin research narrative and selected results only",
+  "scope": {
+    "representative_figures": 2,
+    "summary_rows": 15,
+    "parameter_files": 5,
+    "source_code_included": false,
+    "full_ledgers_and_audit_dumps_included": false
+  },
+  "files": [
     {
-      "original_project_path": "docs/results/top3/metrics.csv",
-      "published_path": "research/bitcoin-auto-trade/results/metrics.csv",
-      "bytes": 2405,
-      "sha256": "8934de6d2b32cf71f5d6123ec895d995a2f471722b74ec35b59756164693ef09"
+      "path": "configs/cross_asset_btc_v1.toml",
+      "bytes": 2025,
+      "sha256": "3bf8f8a698aa720ed53a085725753ecfd2c39b9071bd17c96b6cf53f2f1b1d8b"
     },
     {
-      "original_project_path": "docs/results/top3/equity.csv",
-      "published_path": "research/bitcoin-auto-trade/results/equity.csv",
-      "bytes": 260255,
-      "sha256": "3660f87c189d76862ca25d9f385a34b6265d95ef4d95ee497ec3c91c0dc15d83"
+      "path": "configs/cross_asset_eth_v1.toml",
+      "bytes": 2025,
+      "sha256": "275c0eb804d3cf4c0c0fe6b79f305bd5204bdd894f2182a3da0e162e381ce8f4"
     },
     {
-      "original_project_path": "docs/results/top3/manifest.json",
-      "published_path": "research/bitcoin-auto-trade/results/manifest.json",
-      "bytes": 26463,
-      "sha256": "a3608e96934f1dfeddd7091acb6d7d8c780e6273156d80660ddcdcc79f726331"
+      "path": "configs/cross_asset_sol_v1.toml",
+      "bytes": 2025,
+      "sha256": "0254289d8033206b6ce0775444256a278bb720777652c0b848d5a75c4a4db28b"
     },
     {
-      "original_project_path": "docs/results/top3/ranking_snapshot.json",
-      "published_path": "research/bitcoin-auto-trade/results/ranking_snapshot.json",
-      "bytes": 22460,
-      "sha256": "7816d0eb0852a4195aeaf7ee1366bffe4846ee61d5e79571f1175ccf82fec202"
+      "path": "configs/cross_asset_xrp_v1.toml",
+      "bytes": 2025,
+      "sha256": "490b13afe13c5e087468ca03804294bc3ac1fce5d89c89617eb1ec8c9f44b018"
     },
     {
-      "original_project_path": "docs/results/top3/reproduction.json",
-      "published_path": "research/bitcoin-auto-trade/results/reproduction.json",
-      "bytes": 43290,
-      "sha256": "7f4064fd1bdefa86acd0135f3bddc3f36526b927554063c84b9616ffaac7122c"
+      "path": "configs/hmm_fixed_best_funding_actual_v1.toml",
+      "bytes": 1934,
+      "sha256": "4f0a09f321bf74cc453aebc98593f82a5b432182eb56828e27feadafa2d4d1bd"
     },
     {
-      "original_project_path": "docs/results/top3/verification.json",
-      "published_path": "research/bitcoin-auto-trade/results/verification.json",
-      "bytes": 2097,
-      "sha256": "7c7bdc6b95b5d8f328865505c19370d36d42cd7959e28c86c71865a6f8c4f588"
+      "path": "configs/README.md",
+      "bytes": 1515,
+      "sha256": "7f61f7ddc18637775bf7f83bb688ea82df51e6e85fc921a2e76ebefc40435f0f"
     },
     {
-      "original_project_path": "docs/results/top3/images/pnl_drawdown.png",
-      "published_path": "research/bitcoin-auto-trade/results/images/pnl_drawdown.png",
-      "bytes": 238776,
-      "sha256": "2c1f8c22a9509c5693d40467508ae792ee2a9ccac5a74610f492e86b5e8e5f4b"
-    },
-    {
-      "original_project_path": "docs/results/top3/images/recent_pnl_drawdown.png",
-      "published_path": "research/bitcoin-auto-trade/results/images/recent_pnl_drawdown.png",
-      "bytes": 239890,
-      "sha256": "dc9e98ce38eebedece0bb71624743aa01849838c106047bd8f6d03c4e43d2f57"
-    },
-    {
-      "original_project_path": "configs/top3_01_funding.toml",
-      "published_path": "research/bitcoin-auto-trade/configs/top3_01_funding.toml",
-      "bytes": 1142,
-      "sha256": "d2c87fadcd89f1c24b26696c528692b155c5b8a717d6a3398e42f1084668968b"
-    },
-    {
-      "original_project_path": "configs/top3_02_ema60.toml",
-      "published_path": "research/bitcoin-auto-trade/configs/top3_02_ema60.toml",
-      "bytes": 1077,
-      "sha256": "c37377b72a776d1840e9893b8aa6944b4ce1c147e59b76fb2019e3c168bf8d21"
-    },
-    {
-      "original_project_path": "configs/top3_03_momentum120.toml",
-      "published_path": "research/bitcoin-auto-trade/configs/top3_03_momentum120.toml",
-      "bytes": 1221,
-      "sha256": "94b4ab2d2bbe99606ceccb700518bf3c781221a4c9835bdf257be7d3a511efd1"
-    },
-    {
-      "original_project_path": "docs/assets/research/hmm_five_observations_20261022/observation_regime_zoom.png",
-      "original_report_path": "reports/diagnostics/hmm_five_observations_20261022/images/observation_regime_zoom.png",
-      "published_path": "research/bitcoin-auto-trade/results/images/observation_regime_zoom.png",
-      "bytes": 362903,
-      "sha256": "95979a9aa0c361eced80809ded937ec964507f47178cfbadaf7403551757b3d0"
-    }
-  ],
-  "authored_markdown": [
-    {
-      "path": "MAINTENANCE.md",
-      "sha256": "855edefd843485e2e2477e0f8395eb532395e96f5001a8d7cdac26202204a596"
+      "path": "EXPERIMENTS.md",
+      "bytes": 4309,
+      "sha256": "07ec3438c54429af9e6fc5d38bac2c335a4cf34dc94ff489cff4bfc88995c7f3"
     },
     {
       "path": "README.md",
-      "sha256": "dc60551819d7ebe81ee3190adaae180e937f629fdc350b28a779b74d9c278ded"
+      "bytes": 4895,
+      "sha256": "448df65ac82a35500cbf1ca98539238800d775fe00e2e2dccaa446812e2fb40b"
     },
     {
-      "path": "research/bitcoin-auto-trade/EXPERIMENTS.md",
-      "sha256": "a1552cd0dfbf4fc360ae12a974ee9d3326d907c97202139d003ee642902216b0"
+      "path": "results/images/btc_strategy_comparison.png",
+      "bytes": 303764,
+      "sha256": "915b2f8b6efd44e9957a16fd81292b7b1b29458418fb885222c6a3d4b463d69f"
     },
     {
-      "path": "research/bitcoin-auto-trade/README.md",
-      "sha256": "1c7a46637c18731173e87e94296697e0c024e47adc086feb2aad47a41e9cede5"
+      "path": "results/images/cross_asset_equity_drawdown.png",
+      "bytes": 890435,
+      "sha256": "a89095ed392b1433b6f9ea5ee0011aced47259ddb6eb66f77dc3b8e8c0463903"
     },
     {
-      "path": "research/bitcoin-auto-trade/ROADMAP.md",
-      "sha256": "c5a5520502134543e29679f59d9f7bfb20a58f13f548d7ee7faee3aa30ab13b1"
+      "path": "results/README.md",
+      "bytes": 3047,
+      "sha256": "8e22086eabd60796ccdb77e5ef0cc4f4836b4d29bf64228de971ac3fd2cca43a"
     },
     {
-      "path": "research/bitcoin-auto-trade/configs/README.md",
-      "sha256": "d2af43023b68b3fc2517af050a2e724c05bb7b5ac01d86f0736d82cfd912ffe6"
-    },
-    {
-      "path": "research/bitcoin-auto-trade/results/README.md",
-      "sha256": "0d44b0cbb4efcb554ddd6cc43964ad180ef3e7aa6a08fade5c4151ea760d5f7e"
-    },
-    {
-      "path": "templates/PROJECT.md",
-      "sha256": "e2c1a963bf6e69a92ba03bc4fdffd263b1f12f21ac6d7dcaaf480be6da8f1d89"
+      "path": "results/summary.csv",
+      "bytes": 3045,
+      "sha256": "b173a43f03c9398d287fa69c85f70a4d1e539c2a3f2f20f89cdc01b68ccb5c50"
     }
   ]
 }
