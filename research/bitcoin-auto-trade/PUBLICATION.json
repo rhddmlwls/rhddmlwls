@@ -32,8 +32,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4127,
-      "sha256": "1375e606caa51ccb2f0ae9124e80f2522f9b78e705cec0120f135432c969ce0e"
+      "bytes": 3630,
+      "sha256": "3bbbea06e2c344963f7e9583cc94cf0d781011b346b9ae55851ce4e8205bc846"
     },
     {
       "path": "results/equity.csv",
@@ -42,8 +42,8 @@
     },
     {
       "path": "results/images/btc_strategy_comparison.png",
-      "bytes": 303764,
-      "sha256": "915b2f8b6efd44e9957a16fd81292b7b1b29458418fb885222c6a3d4b463d69f"
+      "bytes": 247916,
+      "sha256": "6ee78714355d28e1c900fae72746dcae76f1273fba05688a28ea9915ab4eb95d"
     },
     {
       "path": "results/images/cross_asset_equity_drawdown.png",
@@ -52,8 +52,8 @@
     },
     {
       "path": "results/README.md",
-      "bytes": 2472,
-      "sha256": "f4683631fac7f1927c1e3f0cd96d41eb648516e2a8a4b35653c3147d08f48d15"
+      "bytes": 2515,
+      "sha256": "dcc319e89f53e923452a4aac10c13cadbafd0c979df0d2c15cbb7ea5d5723a09"
     },
     {
       "path": "results/summary.csv",
