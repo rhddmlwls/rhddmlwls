@@ -6,15 +6,15 @@ Interested in Quantitative Research
 
 [시장 국면에 따른 매매 전략 연구](research/bitcoin-auto-trade/)
 
-BTC 일봉과 펀딩으로 시장 국면을 추정하고, 국면별 매매 전략을 비용 반영 백테스트로 비교한 연구임.
+BTC OHLCV, funding data로 시장 국면을 추정하고, 국면별 매매 전략을 비용 반영 백테스트로 비교한 프로젝트
 
 ## Research
 
 ### 금융수학2
 
-**[BTC 옵션의 변동성 모형과 헤지 성능 비교](research/financial-mathematics-2/)**
+**[주제 선정 중](research/financial-mathematics-2/)**
 
-옵션 가격을 잘 맞추는 모형이 헤지 오차도 줄이는지 확인할 계획임. 같은 BTC 옵션 자료로 Black–Scholes와 Heston을 비교할 예정임.
+.
 
 상태: 주제와 실험 범위 기획 중임.
 
