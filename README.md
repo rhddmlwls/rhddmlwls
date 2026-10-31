@@ -1,6 +1,6 @@
 # rhddmlwls
 
-Quantitative Research
+Interested in Quantitative Research
 
 ## Research
 
