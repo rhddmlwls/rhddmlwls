@@ -26,11 +26,11 @@ py -3.12 -m venv .venv
 .\run-experiment.ps1 -Config configs/btc.toml
 ```
 
-다른 운영체제에서는 가상환경에 설치한 뒤 `btc-research --config configs/btc.toml --check`로 검사하고, `--check`를 빼고 실행함. `CheckOnly`도 입력 파일은 필요하며 학습은 하지 않음.
+다른 운영체제에서는 가상환경에 설치하고 활성화한 뒤 `btc-research --config configs/btc.toml --check`로 검사하고, `--check`를 빼고 실행함. `CheckOnly`도 입력 파일은 필요하며 학습은 하지 않음.
 
 ```powershell
-btc-research --verify-results
-python -m unittest discover -s tests -v
+.\.venv\Scripts\python.exe -m trading.run --verify-results
+.\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
 검산 명령은 저장된 15개 자산곡선에서 수익률·Sharpe·최대낙폭을 계산하므로 원시 자료가 필요하지 않음. 테스트는 [test_core.py](tests/test_core.py) 한 파일에 모음.

@@ -57,5 +57,5 @@ py -3.12 -m venv .venv
 실행에는 별도 가격·펀딩 CSV가 필요함. 저장된 대표 성과만 검산하려면 다음 명령을 사용함.
 
 ```powershell
-btc-research --verify-results
+.\.venv\Scripts\python.exe -m trading.run --verify-results
 ```

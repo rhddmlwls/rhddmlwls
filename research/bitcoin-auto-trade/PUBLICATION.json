@@ -21,8 +21,8 @@
     },
     {
       "path": "CODE.md",
-      "bytes": 2022,
-      "sha256": "4f887530b26a598ca5db8e49b37dbd85aa2bdd6dc781f84b7b131894d43969c1"
+      "bytes": 2087,
+      "sha256": "e93479d3ea75dc5da948cb25fbd7d7403c3a1df9c689801f777f96f6680f5ad9"
     },
     {
       "path": "EXPERIMENTS.md",
@@ -31,8 +31,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4093,
-      "sha256": "63a4e8251f866db6fe351d5d5432c9766e5918569a056c14629b4fafb056d496"
+      "bytes": 4122,
+      "sha256": "ef587306d27b35e9c54bbae158a6da7d69efd9ee12787b020c4effe3ce630de4"
     },
     {
       "path": "configs/README.md",
@@ -61,8 +61,8 @@
     },
     {
       "path": "results/README.md",
-      "bytes": 2893,
-      "sha256": "203834900d1400093b989322a3ce3ec8cceb11c473f64d59b5877890e1aed047"
+      "bytes": 2922,
+      "sha256": "77d62f5d8e7c4c82699e024ef66cd84f75bad737a4336a71f39f20713bf558d2"
     },
     {
       "path": "results/equity.csv",
