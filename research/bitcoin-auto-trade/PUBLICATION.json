@@ -27,13 +27,13 @@
     },
     {
       "path": "EXPERIMENTS.md",
-      "bytes": 2736,
-      "sha256": "540e9c5db362177017179d2e0317518a8d66141ebb54f60d8edfe33bfa1581d1"
+      "bytes": 2152,
+      "sha256": "18106493e1b4438207cb6e3f04e8b4f38ad48553441f66c5bf220135a2822442"
     },
     {
       "path": "README.md",
-      "bytes": 3630,
-      "sha256": "3bbbea06e2c344963f7e9583cc94cf0d781011b346b9ae55851ce4e8205bc846"
+      "bytes": 3640,
+      "sha256": "1f939bc1183899c89d34d0b3c07102eabcca8462faa3d8e34db5d5069634451f"
     },
     {
       "path": "results/equity.csv",
@@ -52,8 +52,8 @@
     },
     {
       "path": "results/README.md",
-      "bytes": 2515,
-      "sha256": "dcc319e89f53e923452a4aac10c13cadbafd0c979df0d2c15cbb7ea5d5723a09"
+      "bytes": 2552,
+      "sha256": "ce92a8c354b98ce7050c8ad209e4338d9eea687a27528a8a2fab2add613d9393"
     },
     {
       "path": "results/summary.csv",
